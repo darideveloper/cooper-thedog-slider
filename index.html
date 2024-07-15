@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,663 +19,698 @@
     <!-- Latest compiled JavaScript -->
     <!--<script src="https://protect-us.mimecast.com/s/vrrYCNkKpKsj71Dqtra3m9"></script>-->
 
+    <!-- TODO: uncomment script -->
     <!-- Iframe Link Modifier -->
-    <script src="https://supp-saux.sumtotaldemo.net/SA_UX/Tools/iframe-link-modifier-17_1.js"></script>
+    <!-- <script src="https://supp-saux.sumtotaldemo.net/SA_UX/Tools/iframe-link-modifier-17_1.js"></script> -->
 
     <!-- Main CSS 
     <link rel="stylesheet" href="main.css"> -->
 
+    <!-- splide js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
     <style>
-      /* Body */
-* {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-* {
-	/* resets */
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	border: none;
-	text-decoration: none;
-	font-weight: inherit;
-	border-collapse: collapse;
-	-webkit-font-smoothing: antialiased;
-	outline: 0;
-}
-
-
-html,
-body {
-    margin:0;
-    padding:0;
-        font-size: calc(((100vw + 100vh) / 2)*.050)
-}
-
-@media screen and (min-width: 1200px) {
-    html,
-    body {
-        font-size: 55px;
-    }
-
-}
-
-a {
-    text-decoration: none;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-.clearfix {
-    *zoom: 1;
-}
-
-.wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-    text-align: center;
-}
-
-.welcometext {
-  position:absolute;
-  top:22%;
-  width:30%;
- left: 5%; 
-}
-
-.welcometext2 {
-position: absolute;
-    top: 8%;
-    width: 15%;
-    left: 5.5%;
-}
-
-/* slide effect */
-.carousel .item .image {
-    -webkit-transition: all 12s 5s;
-  -moz-transition: all 12s 5s;
-  -o-transition: all 12s 5s;
-  transition: all 12s 5s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 110%;
-    background-size: cover;
-    background-position:  center center;
-}
-
-.carousel .item.active.start .image,
-.carousel .item .image {
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-}
-
-.carousel .item.active .image {
-  -webkit-transform: translateX1(-10%);
-  -moz-transform: translateX(-10%);
-  -o-transform: translateX(-10%);
-  -ms-transform: translateX(-10%);
-  transform: translateX(-10%);
-    -webkit-transition: all 13s;
-  -moz-transition: all 13ss;
-  -o-transition: all 13s;
-  transition: all 13s;
-}
-
-.carousel .item .image {
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-}
-
-
-    /* Carousel Fade */
-
-.carousel.fade {
-    opacity: 1;
-    background-color: black;
-}
-
-.carousel.fade .item {
-    -moz-transition: opacity ease-in-out 1.5s;
-    -o-transition: opacity ease-in-out 1.5s;
-    -webkit-transition: opacity ease-in-out 1.5s;
-    transition: opacity ease-in-out 1.5s;
-    left: 0 !important;
-    opacity: 0;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    display: block !important;
-    z-index: 1;
-}
-
-.carousel.fade .item:first-child {
-    top: auto;
-    position: relative;
-}
-
-.carousel.fade .item.active {
-    opacity: 1;
-    -moz-transition: opacity ease-in-out 1.5s;
-    -o-transition: opacity ease-in-out 1.5s;
-    -webkit-transition: opacity ease-in-out 1.5s;
-    transition: opacity ease-in-out 1.5s;
-    z-index: 2;
-}
-
-.carousel.fade .carousel-control {
-    z-index: 2;
-}
-
-
-    /* Content */
-
-
-    /* Header */
-
-.wrapper .header {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: calc(100vh - 60px);
-    width: 100%;
-}
-
-
-.wrapper .header .carousel {
-    height: 100%;
-    width: 100%;
-}
-
-
-.wrapper .header .carousel .carousel-inner {
-    height: 100%;
-    width: 100%;
-}
-
-.wrapper .header .carousel .carousel-inner .item {
-    height: 100%;
-    width: 100%;
-}
-
-
-.wrapper .header .text {
-    position: absolute;
-    top: 40%;
-    width: 80%;
-    transform: translateY(-50%);
-    left: 0%;
-    z-index: 1;
-    text-align: left;
-}
-
-.wrapper .header .text_wrapper {
-    max-width: 50%;
-    height: 100vh;
-    position: relative;
-    margin: 0 0 0 10%;
-    /* z-index: 1000; */
-    padding: 0 16px;
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: cover;
-    background-size: contain;
-}
-
-#myCarousel::before {
-    position: absolute;
-    display: block;
-    width: 42%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    content: '';
-    z-index: -9;
-    background-color: #425563;
-}
-
-.wrapper .header .text h1 {
-    color: #fff;
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.wrapper .header .text p {
-    color: #ffffff;
-    font-weight: 400;
-    margin-bottom: -10px;
-}
-
-
-
-    /* Buttons */
-
-.buttons {
-    height: 120px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding: 0 50px;
-    background: #425563;
-    border-top: 2px solid #d9e1e2;
-    z-index: 9999;
-}
-
-.wrapper .buttons ul {
-    position: absolute;
-   -webkit-inline-flex; 
-    -ms-inline-flexbox;
-    margin-top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.wrapper .buttons ul li {
-    height: 100%;
-    padding: 0 0 0 0;
-}
-
-.buttons ul {
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    max-width: 1366px;
-    display: inline-flex;
-    justify-content: center;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.buttons ul li {
-        width: 100%;
-    max-width: 250px;
-    flex-grow: 1;
-    min-width: 200px;
-    flex-basis: 0;
-}
-
-.buttons ul li .inner {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    
-}
-
-.buttons ul li:hover .inner {
-
-}
-
-
-.buttons ul li:hover {
-    opacity: 1;
-    background: #d9e1e2;
-    
-}
-
-.buttons ul li .inner i {
-    color: #ffffff;
-    font-size: .6em;
-}
-
-.buttons ul li:hover .inner i,
-.buttons ul li:hover .inner > p {
-    opacity: 1;
-    color: #425563;
-}
-    
-.buttons ul li .inner > p {
-        color: #ffffff;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        transition: 0.2s;
-}
-
-
-.buttons ul li .description {
-    position: absolute;
-    bottom: calc(100% + 18px);
-    left: 0;
-    right: 0;
-    margin: auto;
-    padding: 20px;
-    border-radius: 5px;
-    background: #ffffff;
-    color: black;
-    opacity: 0;
-    transform: translateY(20%);
-    pointer-events: none;
-    transition: all .5s
-    text-align: left;
-}
-
-.buttons ul li:hover:not(.description) .description {
-    opacity: 1;
-    transform: translateY(-5%);
-}
-
-.buttons ul li .description p {
-    font-size: .27em;
-    margin: 0;
-    padding: 0;
-}
-
-/* stagger */
-
-
-.animate-panel ul li {
-    position: relative;
-    opacity: 0 !important;
-    left: 100% !important;
-    transition: all 0.2s;
-}
-
-.animate-panel ul li.animate {
-    opacity: 1 !important;
-    left: 0 !important;
-}
-
-
-.animate-panel ul li.done {
-    position: static;
-}
-
-/* Player */
-
-
-.header .youtube-link {
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    display: inline-block;
-    color: #ffffff;
-    padding: 12px 50px;
-    border-radius: 5px;
-    transition: all .25s;
-    cursor: pointer;
-    background: #115687;
-    /* font-style: italic; */
-    color: white !important;
-    font-weight: 700;
-}
-
-
-.header .youtube-link span {
-   
-}
-
-.header .youtube-link:hover {
-     background: #00385d;
-    opacity: 1;
-}
-
-#player-container {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 99;
-    background-color: RGBA(0,0,0,.7)
-}
-
-#player {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.video-container {
-    width: calc(100vw - 177.78px); 
-    height: calc(56.25vw - 100px); /* height:width ratio = 9/16 = .5625  */
-
-    max-height: calc(100vh - 100px);
-    max-width: calc(177.78vh - 177.78px); /* 16/9 = 1.778 */
-    margin: auto;
-    position: absolute;
-    top:0;bottom:0; /* vertical center */
-    left:0;right:0; /* horizontal center */
-}
-
-.video-container iframe, .video-container object, .video-container embed {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-}
-
-#close-video {
- position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #ffffff;
-    
-    z-index: 9;
-}
-
-.fa-times-circle {   
-    font-size: 40px;  
-    cursor: pointer;
-}
-
-.fa-times-circle:hover {
-    opacity: .8;
-}
-
-.buttons a {
-    display: block;
-    height: 60px;
-    padding: 7px 0 0 0;
-    top: 0;
-    cursor: pointer;
-}
-
-.buttons a:hover {
-   
-}
-
-.crossfade {
-    z-index: -10;
-    position: absolute;
-    width: 60%;
-    right: 0;
-    height: 100vh;
-    top: 0;
-    background: #ebe7de;
-}
-
-a { 
-    
-}
-        
-.crossfade > figure {
-  animation: imageAnimation 30s linear infinite 0s;
-  backface-visibility: hidden;
-  background-size: cover;
-  background-position: right center;
-  color: transparent;
-  height: 100%;
-  right: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  z-index: 0; 
-}   
- 
-.crossfade > figure:nth-child(1) {
-  background-image: url('/Core/33.sumtfile');  
-}
-.crossfade > figure:nth-child(2) {
-  animation-delay: 6s;
-  background-image: url('/Core/34.sumtfile');
-}
-.crossfade > figure:nth-child(3) {
-  animation-delay: 12s;
-  background-image: url('/Core/35.sumtfile');
-}
-.crossfade > figure:nth-child(4) {
-  animation-delay: 18s;
-  background-image: url('/Core/36.sumtfile');
-}
-.crossfade > figure:nth-child(5) {
-  animation-delay: 24s;
-  background-image: url('/Core/37.sumtfile');
-}
-
-@keyframes imageAnimation {
-  0% {
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  8% {
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  17% {
-    opacity: 1
-  }
-  25% {
-    opacity: 0
-  }
-  100% {
-    opacity: 0
-  }
-}
-
-
-.background_video {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateX(-0%) translateY(-50%);
-    cursor: pointer;
-    min-width: 50%;
-    min-height: 130%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    overflow: hidden;
-}
-
-#close-video {
- position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #ffffff;
-    
-    z-index: 9;
-}
-
-.popupVideo {
-    display: none;
-}
-
-a.header_button {
-    font-size: 18px;
-    letter-spacing: 1.6px;
-    padding: 14px 20px 12px 30px;
-    margin: 0 25px 0 0;
-    cursor: pointer;
-    border: 1px solid #ffffff;
-    background: #d9e1e2; 
-    height: 74px;
-    /* border-radius: 5px; */
-    transition: all .2s;
-    display: inline-block;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-a.header_button:hover {
-    background: #ffffff;
-    color: #009f4d;
-}
-
-
-.header_button:hover .front_span {
-    opacity: 1;
-    max-width: 300px;
-}
-
-.buttons ul li .description {
-    position: absolute;
-    bottom: calc(100% + 18px);
-    left: 0;
-    right: 0;
-    margin: auto;
-    padding: 20px;
-    border-radius: 5px;
-    background: white;
-    color: black;
-    opacity: 0;
-    transform: translateY(20%);
-    pointer-events: none;
-    transition: all .35s;
-    text-align: left;
-}
-
-.buttons ul li:hover:not(.description) .description {
-    opacity: 1;
-    transform: translateY(-10px);
-}
-
-.buttons ul li .description p {
-    font-size: .27em;
-    margin: 0;
-    padding: 0;
-  
-}
-
-.buttons ul li:hover .inner:after {
-    bottom: 114%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136,183,213,0);
-    border-bottom-color: #d9e1e2;
-    border-width: 7px;
-    margin-left: -7px;
-
-}
+        /* Body */
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * {
+            /* resets */
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: none;
+            text-decoration: none;
+            font-weight: inherit;
+            border-collapse: collapse;
+            -webkit-font-smoothing: antialiased;
+            outline: 0;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: calc(((100vw + 100vh) / 2)*.050)
+        }
+
+        @media screen and (min-width: 1200px) {
+
+            html,
+            body {
+                font-size: 55px;
+            }
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .welcometext {
+            position: absolute;
+            top: 22%;
+            width: 30%;
+            left: 5%;
+        }
+
+        .welcometext2 {
+            position: absolute;
+            top: 8%;
+            width: 15%;
+            left: 5.5%;
+        }
+
+        /* slide effect */
+        .carousel .item .image {
+            -webkit-transition: all 12s 5s;
+            -moz-transition: all 12s 5s;
+            -o-transition: all 12s 5s;
+            transition: all 12s 5s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 110%;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .carousel .item.active.start .image,
+        .carousel .item .image {
+            -webkit-transform: translateX(0%);
+            -moz-transform: translateX(0%);
+            -o-transform: translateX(0%);
+            -ms-transform: translateX(0%);
+            transform: translateX(0%);
+        }
+
+        .carousel .item.active .image {
+            -webkit-transform: translateX1(-10%);
+            -moz-transform: translateX(-10%);
+            -o-transform: translateX(-10%);
+            -ms-transform: translateX(-10%);
+            transform: translateX(-10%);
+            -webkit-transition: all 13s;
+            -moz-transition: all 13ss;
+            -o-transition: all 13s;
+            transition: all 13s;
+        }
+
+        .carousel .item .image {
+            -webkit-transform: translateX(0%);
+            -moz-transform: translateX(0%);
+            -o-transform: translateX(0%);
+            -ms-transform: translateX(0%);
+            transform: translateX(0%);
+        }
+
+
+        /* Carousel Fade */
+
+        .carousel.fade {
+            opacity: 1;
+            background-color: black;
+        }
+
+        .carousel.fade .item {
+            -moz-transition: opacity ease-in-out 1.5s;
+            -o-transition: opacity ease-in-out 1.5s;
+            -webkit-transition: opacity ease-in-out 1.5s;
+            transition: opacity ease-in-out 1.5s;
+            left: 0 !important;
+            opacity: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            display: block !important;
+            z-index: 1;
+        }
+
+        .carousel.fade .item:first-child {
+            top: auto;
+            position: relative;
+        }
+
+        .carousel.fade .item.active {
+            opacity: 1;
+            -moz-transition: opacity ease-in-out 1.5s;
+            -o-transition: opacity ease-in-out 1.5s;
+            -webkit-transition: opacity ease-in-out 1.5s;
+            transition: opacity ease-in-out 1.5s;
+            z-index: 2;
+        }
+
+        .carousel.fade .carousel-control {
+            z-index: 2;
+        }
+
+
+        /* Content */
+
+
+        /* Header */
+
+        .wrapper .header {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: calc(100vh - 60px);
+            width: 100%;
+        }
+
+
+        .wrapper .header .carousel {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .wrapper .header .carousel .carousel-inner {
+            height: 100%;
+            width: 100%;
+        }
+
+        .wrapper .header .carousel .carousel-inner .item {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .wrapper .header .text {
+            position: absolute;
+            top: 40%;
+            width: 80%;
+            transform: translateY(-50%);
+            left: 0%;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .wrapper .header .text_wrapper {
+            max-width: 50%;
+            height: 100vh;
+            position: relative;
+            margin: 0 0 0 10%;
+            /* z-index: 1000; */
+            padding: 0 16px;
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            background-size: cover;
+            background-size: contain;
+        }
+
+        #myCarousel::before {
+            position: absolute;
+            display: block;
+            width: 42%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            content: '';
+            z-index: -9;
+            background-color: #425563;
+        }
+
+        .wrapper .header .text h1 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .wrapper .header .text p {
+            color: #ffffff;
+            font-weight: 400;
+            margin-bottom: -10px;
+        }
+
+
+
+        /* Buttons */
+
+        .buttons {
+            height: 120px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding: 0 50px;
+            background: #425563;
+            border-top: 2px solid #d9e1e2;
+            z-index: 9999;
+        }
+
+        .wrapper .buttons ul {
+            position: absolute;
+            -webkit-inline-flex;
+            -ms-inline-flexbox;
+            margin-top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .wrapper .buttons ul li {
+            height: 100%;
+            padding: 0 0 0 0;
+        }
+
+        .buttons ul {
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            max-width: 1366px;
+            display: inline-flex;
+            justify-content: center;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .buttons ul li {
+            width: 100%;
+            max-width: 250px;
+            flex-grow: 1;
+            min-width: 200px;
+            flex-basis: 0;
+        }
+
+        .buttons ul li .inner {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .buttons ul li:hover .inner {}
+
+
+        .buttons ul li:hover {
+            opacity: 1;
+            background: #d9e1e2;
+
+        }
+
+        .buttons ul li .inner i {
+            color: #ffffff;
+            font-size: .6em;
+        }
+
+        .buttons ul li:hover .inner i,
+        .buttons ul li:hover .inner>p {
+            opacity: 1;
+            color: #425563;
+        }
+
+        .buttons ul li .inner>p {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+
+
+        .buttons ul li .description {
+            position: absolute;
+            bottom: calc(100% + 18px);
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            background: #ffffff;
+            color: black;
+            opacity: 0;
+            transform: translateY(20%);
+            pointer-events: none;
+            transition: all .5s text-align: left;
+        }
+
+        .buttons ul li:hover:not(.description) .description {
+            opacity: 1;
+            transform: translateY(-5%);
+        }
+
+        .buttons ul li .description p {
+            font-size: .27em;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* stagger */
+
+
+        .animate-panel ul li {
+            position: relative;
+            opacity: 0 !important;
+            left: 100% !important;
+            transition: all 0.2s;
+        }
+
+        .animate-panel ul li.animate {
+            opacity: 1 !important;
+            left: 0 !important;
+        }
+
+
+        .animate-panel ul li.done {
+            position: static;
+        }
+
+        /* Player */
+
+
+        .header .youtube-link {
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            display: inline-block;
+            color: #ffffff;
+            padding: 12px 50px;
+            border-radius: 5px;
+            transition: all .25s;
+            cursor: pointer;
+            background: #115687;
+            /* font-style: italic; */
+            color: white !important;
+            font-weight: 700;
+        }
+
+
+        .header .youtube-link span {}
+
+        .header .youtube-link:hover {
+            background: #00385d;
+            opacity: 1;
+        }
+
+        #player-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+            background-color: RGBA(0, 0, 0, .7)
+        }
+
+        #player {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        .video-container {
+            width: calc(100vw - 177.78px);
+            height: calc(56.25vw - 100px);
+            /* height:width ratio = 9/16 = .5625  */
+
+            max-height: calc(100vh - 100px);
+            max-width: calc(177.78vh - 177.78px);
+            /* 16/9 = 1.778 */
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            /* vertical center */
+            left: 0;
+            right: 0;
+            /* horizontal center */
+        }
+
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #close-video {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ffffff;
+
+            z-index: 9;
+        }
+
+        .fa-times-circle {
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .fa-times-circle:hover {
+            opacity: .8;
+        }
+
+        .buttons a {
+            display: block;
+            height: 60px;
+            padding: 7px 0 0 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .buttons a:hover {}
+
+        .crossfade {
+            z-index: -10;
+            position: absolute;
+            width: 60%;
+            right: 0;
+            height: 100vh;
+            top: 0;
+            background: #ebe7de;
+        }
+
+        a {}
+
+        .crossfade>figure {
+            animation: imageAnimation 30s linear infinite 0s;
+            backface-visibility: hidden;
+            background-size: cover;
+            background-position: right center;
+            color: transparent;
+            height: 100%;
+            right: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: 0;
+        }
+
+        /* TODO: uncomment */
+        /*.crossfade>figure:nth-child(1) {
+            background-image: url('/Core/33.sumtfile');
+        }
+
+        .crossfade>figure:nth-child(2) {
+            animation-delay: 6s;
+            background-image: url('/Core/34.sumtfile');
+        }
+
+        .crossfade>figure:nth-child(3) {
+            animation-delay: 12s;
+            background-image: url('/Core/35.sumtfile');
+        }
+
+        .crossfade>figure:nth-child(4) {
+            animation-delay: 18s;
+            background-image: url('/Core/36.sumtfile');
+        }
+
+        .crossfade>figure:nth-child(5) {
+            animation-delay: 24s;
+            background-image: url('/Core/37.sumtfile');
+        }*/
+
+        @keyframes imageAnimation {
+            0% {
+                animation-timing-function: ease-in;
+                opacity: 0;
+            }
+
+            8% {
+                animation-timing-function: ease-out;
+                opacity: 1;
+            }
+
+            17% {
+                opacity: 1
+            }
+
+            25% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+
+        .background_video {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateX(-0%) translateY(-50%);
+            cursor: pointer;
+            min-width: 50%;
+            min-height: 130%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            overflow: hidden;
+        }
+
+        #close-video {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ffffff;
+
+            z-index: 9;
+        }
+
+        .popupVideo {
+            display: none;
+        }
+
+        a.header_button {
+            font-size: 18px;
+            letter-spacing: 1.6px;
+            padding: 14px 20px 12px 30px;
+            margin: 0 25px 0 0;
+            cursor: pointer;
+            border: 1px solid #ffffff;
+            background: #d9e1e2;
+            height: 74px;
+            /* border-radius: 5px; */
+            transition: all .2s;
+            display: inline-block;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        a.header_button:hover {
+            background: #ffffff;
+            color: #009f4d;
+        }
+
+
+        .header_button:hover .front_span {
+            opacity: 1;
+            max-width: 300px;
+        }
+
+        .buttons ul li .description {
+            position: absolute;
+            bottom: calc(100% + 18px);
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            background: white;
+            color: black;
+            opacity: 0;
+            transform: translateY(20%);
+            pointer-events: none;
+            transition: all .35s;
+            text-align: left;
+        }
+
+        .buttons ul li:hover:not(.description) .description {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        .buttons ul li .description p {
+            font-size: .27em;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .buttons ul li:hover .inner:after {
+            bottom: 114%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-bottom-color: #d9e1e2;
+            border-width: 7px;
+            margin-left: -7px;
+
+        }
+
     </style>
+
+    <!-- 
+    --------------------
+    Dari dev Slider and menu styles
+    ---------------------
+    -->
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 
+    --------------------
+    Dari dev Setup Slider and menu links
+    ---------------------
+    -->
+    <script>
+
+    </script>
 
     <!-- Mobile viewport settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no, minimal-ui">
@@ -699,7 +733,7 @@ a.header_button:hover {
 
         <!-- Header -->
         <div class="header">
-            
+
             <!--<video class="background_video" loop preload autoplay muted>
                 <source src="img/background720.mp4">
             </video>-->
@@ -715,10 +749,13 @@ a.header_button:hover {
                     <figure></figure>
                 </div>
 
-              
-              <img class="welcometext" src="https://pae.sumtotal.host/Core/82.sumtfile">
-              <img class="welcometext2" src="https://pae.sumtotal.host/Core/95.sumtfile">
-<!---                <div class="text_wrapper">
+                
+                <!-- TODO: uncomment images -->
+                <!-- <img class="welcometext" src="https://pae.sumtotal.host/Core/82.sumtfile">
+                <img class="welcometext2" src="https://pae.sumtotal.host/Core/95.sumtfile"> -->
+
+
+                <!---                <div class="text_wrapper">
                 <div class="text">
                 <br><br>  <h1>WELCOME TO <br> <span style="color: #fff; font-size: 56px;">Accelerating U</span></h1><br><br><br>
                     
@@ -730,11 +767,23 @@ a.header_button:hover {
         </div>
         <!-- End Header -->
 
+        <!-- Start slider -->
+        <section class="slider" aria-label="Main gallery">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End slider -->
+
         <!-- Buttons -->
         <div class="buttons animate-panel">
 
             <ul class="list-unstyled list-inline">
-               <li>
+                <li>
                     <a href="/core/dash/learning" target="_top">
                         <div class="inner">
                             <i class="fa fa-dashboard"></i>
@@ -743,25 +792,27 @@ a.header_button:hover {
                                 <p>Access your personal learning dashboard.</p>
                             </div>
                         </div>
-                        
+
                     </a>
-                </li> 
-              
-              <li>
-                    <a href="/core/pillarRedirect?url=%2Flearning%2Fapp%2Fmanagement%2FLMS_TrainRequired.aspx%3FUserMode%3D0&relyingParty=LM" target="_top">
+                </li>
+
+                <li>
+                    <a href="/core/pillarRedirect?url=%2Flearning%2Fapp%2Fmanagement%2FLMS_TrainRequired.aspx%3FUserMode%3D0&relyingParty=LM"
+                        target="_top">
                         <div class="inner">
                             <i class="fa fa-map-o"></i>
-                            <p>My Required  Training</p>
+                            <p>My Required Training</p>
                             <div class="description">
                                 <p>View your assigned training.</p>
                             </div>
                         </div>
-                         
+
                     </a>
                 </li>
-              
-               <li>
-                    <a href="/Core/pillarRedirect?relyingParty=LM&url=https:%2F%2FPAE.sumtotal.host%2Flearning%2Fapp%2Fmanagement%2FLMS_LearnerReports.aspx%3FUserMode%3D0%26Mode%3D1" target="_top">
+
+                <li>
+                    <a href="/Core/pillarRedirect?relyingParty=LM&url=https:%2F%2FPAE.sumtotal.host%2Flearning%2Fapp%2Fmanagement%2FLMS_LearnerReports.aspx%3FUserMode%3D0%26Mode%3D1"
+                        target="_top">
                         <div class="inner">
                             <i class="fa fa-graduation-cap"></i>
                             <p>My Transcript</p>
@@ -769,10 +820,10 @@ a.header_button:hover {
                                 <p>View your completed courses.</p>
                             </div>
                         </div>
-                        
+
                     </a>
                 </li>
-				              
+
                 <li>
                     <a href="/core/dash/MyTeamDash/initial" target="_top">
                         <div class="inner">
@@ -782,12 +833,13 @@ a.header_button:hover {
                                 <p>View your teams dashboard.</p>
                             </div>
                         </div>
-                        
+
                     </a>
                 </li>
-              
-				               <li>
-                    <a href="/core/libraryShare?TopicId=198&TopicName=Accelerating%20U%20Help&SearchText=" target="_top"> 
+
+                <li>
+                    <a href="/core/libraryShare?TopicId=198&TopicName=Accelerating%20U%20Help&SearchText="
+                        target="_top">
                         <div class="inner">
                             <i class="fa fa-question-circle-o"></i>
                             <p>Accelerating U Help</p>
@@ -795,7 +847,7 @@ a.header_button:hover {
                                 <p>Access Help Materials.</p>
                             </div>
                         </div>
-                        
+
                     </a>
                 </li>
             </ul>
@@ -804,59 +856,33 @@ a.header_button:hover {
         <!-- End Buttons -->
 
     </div>
-    <!-- wrapper -->
-    
-    
-    <!-- script for button behavior -->
-    <!--<script type="application/javascript">
-
-        var button1pretextwidth = document.getElementsByClassName('button1pretext')[0].offsetWidth + 29;
-        var button2pretextwidth = document.getElementsByClassName('button2pretext')[0].offsetWidth + 29;
-        
-        
-        var css = '.list a.smallest.button1:hover {padding-left: '+button1pretextwidth+'px;}.list a.smallest.button2:hover {padding-left: '+button2pretextwidth+'px; }';
-        var style = document.createElement('style');
-
-        if (style.styleSheet) {
-            style.styleSheet.cssText = css;
-        } else {
-            style.appendChild(document.createTextNode(css));
-        }
-
-        document.getElementsByTagName('head')[0].appendChild(style);        
-        
-        
-    </script>-->
-    
-
-
 
     <!-- Video JavaScript Section -->
     <script type="text/javascript">
-        $(document).ready(function() {
-            var panels = $('.animate-panel');
-            var items = panels.find("li");
+        $(document).ready(function () {
+            var panels = $('.animate-panel')
+            var items = panels.find("li")
 
-            var listItemDelay = 100;
-            var j = 1200;
+            var listItemDelay = 100
+            var j = 1200
 
-            items.each(function() {
+            items.each(function () {
                 var this_js = this
-                window.setTimeout(function() {
-                    $(this_js).addClass("animate");
-                }, j);
-                window.setTimeout(function() {
-                    $(this_js).addClass("done");
-                }, j + 1000);
-                j += listItemDelay;
-            });
-        });
+                window.setTimeout(function () {
+                    $(this_js).addClass("animate")
+                }, j)
+                window.setTimeout(function () {
+                    $(this_js).addClass("done")
+                }, j + 1000)
+                j += listItemDelay
+            })
+        })
 
-        var tag = document.createElement('script');
-        tag.src = "https://protect-us.mimecast.com/s/OVJxCQWKvKHoOmM1cQblbo";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        var player;
+        var tag = document.createElement('script')
+        tag.src = "https://protect-us.mimecast.com/s/OVJxCQWKvKHoOmM1cQblbo"
+        var firstScriptTag = document.getElementsByTagName('script')[0]
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+        var player
 
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
@@ -866,38 +892,41 @@ a.header_button:hover {
                 events: {
                     'onReady': onPlayerReady
                 }
-            });
+            })
         }
 
         function onPlayerReady(event) {
-            event.target.playVideo();
+            event.target.playVideo()
         }
 
-        $('.youtube-link').click(function() {
-            $('#player-container').fadeIn(500);
-            $('#player').fadeIn(100);
-            player.loadVideoById(this.id);
-        });
+        $('.youtube-link').click(function () {
+            $('#player-container').fadeIn(500)
+            $('#player').fadeIn(100)
+            player.loadVideoById(this.id)
+        })
 
-        $('#close-video').click(function() {
-            $('#player-container').fadeOut(500);
-            $('#player').fadeOut(100);
-            player.loadVideoById(this.id);
+        $('#close-video').click(function () {
+            $('#player-container').fadeOut(500)
+            $('#player').fadeOut(100)
+            player.loadVideoById(this.id)
 
-        });
+        })
 
-        $(document).keyup(function(e) {
+        $(document).keyup(function (e) {
             if (e.keyCode == 27) { // escape key maps to keycode `27`
-                $('#player-container').fadeOut(500);
-                $('#player').fadeOut(100);
-                player.loadVideoById(this.id);
+                $('#player-container').fadeOut(500)
+                $('#player').fadeOut(100)
+                player.loadVideoById(this.id)
 
             }
         });
-       
-        
-        
+
+
+
     </script>
+
+    <!-- TODO: remove external js -->
+    <script src="./code.js"></script>
 
 </body>
 
@@ -905,116 +934,123 @@ a.header_button:hover {
 
 
 <div id="slideout">
-    Help 
+    Help
     <div id="slideout_inner">
-      <a style="text-decoration:none; color:#fff;" href="mailto:acceleratingU@pae.com?subject=Accelerating%20U%20-%20Help"><div class="helpslideoutbutton">Contact Support</div></a>
+        <a style="text-decoration:none; color:#fff;"
+            href="mailto:acceleratingU@pae.com?subject=Accelerating%20U%20-%20Help">
+            <div class="helpslideoutbutton">Contact Support</div>
+        </a>
     </div>
 </div>
 
 <div id="slideout2">
-    Request a Professional Development License 
+    Request a Professional Development License
     <div id="slideout_inner2">
-      <a style="text-decoration:none; color:#fff;" href="/core/pillarRedirect?relyingParty=LM&url=app%2fmanagement%2fLMS_ActDetails.aspx%3fActivityId%3d37816%26UserMode%3d0" target="_top"><div class="helpslideoutbutton2">Submit Request</div></a>
+        <a style="text-decoration:none; color:#fff;"
+            href="/core/pillarRedirect?relyingParty=LM&url=app%2fmanagement%2fLMS_ActDetails.aspx%3fActivityId%3d37816%26UserMode%3d0"
+            target="_top">
+            <div class="helpslideoutbutton2">Submit Request</div>
+        </a>
     </div>
 </div>
 
 <style>
- 
+    #slideout {
+        font-size: 14px;
+        position: fixed;
+        bottom: 280px;
+        left: 0;
+        width: 165px;
+        padding: 22px 10px;
+        text-align: center;
+        color: #425563;
+        font-weight: bold;
+        background: #d9e1e2;
+        transition-duration: 0.3s;
+        border-radius: 0 5px 5px 0;
+    }
 
- 
-  
-#slideout {
-  font-size: 14px;
-    position: fixed;
-    bottom: 280px;
-    left: 0;
-    width: 165px;
-    padding: 22px 10px;
-    text-align: center;
-  color: #425563;
-  font-weight: bold;
-    background: #d9e1e2;
-    transition-duration: 0.3s;
-    border-radius: 0 5px 5px 0;
-}
-  
-   #slideout2 {
-  font-size: 14px;
-    position: fixed;
-    bottom: 140px;
-    left: 0;
-    width: 165px;
-    padding: 22px 10px;
-    text-align: center;
-  color: #425563;
-    background: #d9e1e2;
-     font-weight: bold;
-    transition-duration: 0.3s;
-    border-radius: 0 5px 5px 0;
-}
-  
-  
-a {text-decoration:none;}
-
-#slideout_inner {
-font-size: 14px;
-  position: fixed;
-    bottom: 270px;
-    left: -250px;
-    background: #d9e1e2;
-    width: 250px;
-    padding: 15px;
-    height: 85px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    text-align: center;
-    -webkit-border-radius: 0 0 5px 0;
-    -moz-border-radius: 0 0 5px 0;
-    border-radius: 0 0 5px 0;
-}
-
-  #slideout_inner2 {
-font-size: 14px;
-  position: fixed;
-    bottom: 140px;
-    left: -250px;
-    background: #d9e1e2;
-    width: 250px;
-    padding: 34px;
-    height: 120px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    text-align: center;
-    -webkit-border-radius: 0 0 5px 0; 
-    -moz-border-radius: 0 0 5px 0;
-    border-radius: 0 0 5px 0;
-}
-
-#slideout_inner:hover, #slideout_inner2:hover {
-    left: 150px;
-}
-
-#slideout:hover, #slideout2:hover {
-    left:80px;
-  }
-  
-#slideout:hover #slideout_inner, #slideout_inner:hover, #slideout2:hover #slideout_inner2, #slideout_inner2:hover {
-    left: 0;
-}
-  
+    #slideout2 {
+        font-size: 14px;
+        position: fixed;
+        bottom: 140px;
+        left: 0;
+        width: 165px;
+        padding: 22px 10px;
+        text-align: center;
+        color: #425563;
+        background: #d9e1e2;
+        font-weight: bold;
+        transition-duration: 0.3s;
+        border-radius: 0 5px 5px 0;
+    }
 
 
-  .helpslideoutbutton,   .helpslideoutbutton2 {
-    background:#425563;
-    padding: 20px;
-    
-  }
-  
+    a {
+        text-decoration: none;
+    }
+
+    #slideout_inner {
+        font-size: 14px;
+        position: fixed;
+        bottom: 270px;
+        left: -250px;
+        background: #d9e1e2;
+        width: 250px;
+        padding: 15px;
+        height: 85px;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        text-align: center;
+        -webkit-border-radius: 0 0 5px 0;
+        -moz-border-radius: 0 0 5px 0;
+        border-radius: 0 0 5px 0;
+    }
+
+    #slideout_inner2 {
+        font-size: 14px;
+        position: fixed;
+        bottom: 140px;
+        left: -250px;
+        background: #d9e1e2;
+        width: 250px;
+        padding: 34px;
+        height: 120px;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        text-align: center;
+        -webkit-border-radius: 0 0 5px 0;
+        -moz-border-radius: 0 0 5px 0;
+        border-radius: 0 0 5px 0;
+    }
+
+    #slideout_inner:hover,
+    #slideout_inner2:hover {
+        left: 150px;
+    }
+
+    #slideout:hover,
+    #slideout2:hover {
+        left: 80px;
+    }
+
+    #slideout:hover #slideout_inner,
+    #slideout_inner:hover,
+    #slideout2:hover #slideout_inner2,
+    #slideout_inner2:hover {
+        left: 0;
+    }
+
+
+
+    .helpslideoutbutton,
+    .helpslideoutbutton2 {
+        background: #425563;
+        padding: 20px;
+
+    }
 </style>
-<!---
-<div style="position:fixed; bottom:186px; left:10%;"><a href="/core/pillarRedirect?relyingParty=LM&url=app%2fmanagement%2fLMS_ActDetails.aspx%3fActivityId%3d107586%26UserMode%3d0" target="_top" class="header_button"><span class="second_span">Request a Professional <br>Development License<br> <!--&nbsp;&#9656;></span></a>
-                  </div> --->
