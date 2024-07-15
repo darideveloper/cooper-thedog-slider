@@ -17,12 +17,17 @@ $white: #fff
 #slider
 
     // image size
-    .splide__slide    
-        img 
+    .splide__slide
+        a
+            border: 1px solid red
             width: 95%
-            height: auto
-            object-fit: cover
-            object-position: center
+            display: inline-block
+
+            img 
+                width: 100%
+                height: auto
+                object-fit: cover
+                object-position: center
 
     // Custom arrow buttons
     [aria-controls="slider-track"]

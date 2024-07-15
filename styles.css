@@ -11,8 +11,13 @@
   display: none !important;
 }
 
-#slider .splide__slide img {
+#slider .splide__slide a {
+  border: 1px solid red;
   width: 95%;
+  display: inline-block;
+}
+#slider .splide__slide a img {
+  width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
