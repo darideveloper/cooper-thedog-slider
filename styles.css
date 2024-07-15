@@ -1,5 +1,55 @@
-header {
-  position: initial;
+.header {
+  position: initial !important;
+}
+
+.buttons {
+  position: initial !important;
+  width: 100%;
+}
+
+.header, #slideout, #slideout2 {
+  display: none !important;
+}
+
+#slider .splide__slide img {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+#slider [aria-controls=slider-track] {
+  scale: 2.2;
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: 0.2s;
+}
+#slider [aria-controls=slider-track] svg {
+  fill: #425563;
+  transition-duration: 0.2s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+#slider [aria-controls=slider-track]:hover {
+  background-color: #425563;
+}
+#slider [aria-controls=slider-track]:hover svg {
+  fill: #fff;
+}
+#slider [role=tablist] button {
+  width: 12px;
+  height: 12px;
+  background-color: #425563;
+  opacity: 0.5;
+  transition-duration: 0.2s;
+}
+#slider [role=tablist] button.is-active {
+  opacity: 1;
+}
+#slider [role=tablist] button:hover:not(.is-active) {
+  opacity: 0.8;
+}
+@media screen and (max-width: 600px) {
+  #slider [aria-controls=slider-track] {
+    scale: 1.5;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

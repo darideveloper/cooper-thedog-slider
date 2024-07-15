@@ -1,4 +1,62 @@
-// Fix wrons styles
-header
-    position: initial
+// Sass variables
+$blue: #425563
+$white: #fff
     
+// Fix wrong styles
+.header
+    position: initial !important
+
+.buttons 
+    position: initial !important
+    width: 100%
+
+.header, #slideout, #slideout2
+    display: none !important
+
+// Slider styles 
+#slider
+
+    // image size
+    .splide__slide    
+        img 
+            width: 95%
+            height: auto
+            object-fit: cover
+            object-position: center
+
+    // Custom arrow buttons
+    [aria-controls="slider-track"]
+        scale: 2.2
+        background-color: rgba(0, 0, 0, 0.0)
+        transition-duration: 0.2s
+        
+        svg 
+            fill: $blue
+            transition-duration: 0.2s
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+
+        &:hover
+            background-color: $blue
+            svg 
+                fill: $white
+
+    // Custom dots
+    [role="tablist"]
+        button
+            width: 12px
+            height: 12px
+            background-color: $blue
+            opacity: 0.5
+            transition-duration: 0.2s
+
+            &.is-active
+                opacity: 1
+
+            &:hover:not(.is-active)
+                opacity: 0.8
+
+    // Slider responsive
+    @media screen and (max-width: 600px)
+        // Custom arrow buttons
+        [aria-controls="slider-track"]
+            scale: 1.5                
