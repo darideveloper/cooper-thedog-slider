@@ -1,6 +1,7 @@
 // Sass variables
 $blue: #425563
 $white: #fff
+$grey: #d9e1e2
     
 // Fix wrong styles
 .header
@@ -9,6 +10,7 @@ $white: #fff
 .buttons 
     position: initial !important
     width: 100%
+    display: none !important
 
 .header, #slideout, #slideout2
     display: none !important
@@ -19,7 +21,6 @@ $white: #fff
     // image size
     .splide__slide
         a
-            border: 1px solid red
             width: 95%
             display: inline-block
 
@@ -65,3 +66,66 @@ $white: #fff
         // Custom arrow buttons
         [aria-controls="slider-track"]
             scale: 1.5                
+
+// New buttons section
+#buttons-new
+    background-color: $blue
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: bold
+
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        max-width: 1300px
+        margin: 0 auto
+
+        li
+            display: inline-block
+            width: 200px
+            height: 120px
+            cursor: pointer
+            transition-duration: 0.2s
+
+            &:hover
+                background-color: $grey
+
+                a
+                    color: $blue
+
+                    .description
+                        opacity: 1
+                        top: -50px
+
+            a
+                color: $white
+                width: 100%
+                height: 100%
+                padding: 10px
+                display: flex
+                flex-direction: column
+                justify-content: space-evenly
+                align-items: center
+                transition-duration: 0.2s
+                position: relative
+
+                .fa
+                    font-size: 47px
+
+                .description
+                    opacity: 0
+                    border: 1px solid $white
+                    position: absolute
+                    top: 0
+                    right: 0
+                    padding: 5px
+                    font-size: 12px
+                    width: 100%
+                    background-color: $white
+                    color: $blue
+                    z-index: 1
+                    transition-duration: 0.2s
+                    transition-delay: 0.2s
+                    border-radius: 5px
