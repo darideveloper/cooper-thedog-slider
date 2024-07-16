@@ -69,11 +69,79 @@ $grey: #d9e1e2
 
 // New buttons section
 #buttons-new
-    background-color: $blue
     font-size: 14px
     text-transform: uppercase
     font-weight: bold
+    position: relative
+    // Dynamic height from css
+    
+    > .content
+        width: 100%
+        height: auto
 
+    // button style
+    li
+        display: inline-block
+        width: 200px
+        height: 120px
+        cursor: pointer
+        transition-duration: 0.2s
+        color: $white
+        padding: 10px
+
+        &.active
+            background-color: $grey
+            color: $blue
+
+        &:hover
+            .fa
+                font-size: 40px
+
+            > .content .description
+                opacity: 1
+                top: -70px
+
+        .content
+            width: 100%
+            height: 100%
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            transition-duration: 0.2s
+
+        a
+            width: 100%
+            height: 100%
+            padding: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            transition-duration: 0.2s
+
+        .fa
+            transition-duration: 0.2s
+            font-size: 30px
+
+        .description
+            opacity: 0
+            border: 1px solid $white
+            position: absolute
+            top: 0
+            right: 0
+            padding: 5px
+            font-size: 12px
+            width: 100%
+            background-color: $white
+            color: $blue
+            transition-duration: 0.2s
+            transition-delay: 0.2s
+            border-radius: 5px
+            z-index: 1
+
+    // Global menu styles
     ul
         display: flex
         flex-wrap: wrap
@@ -82,50 +150,26 @@ $grey: #d9e1e2
         max-width: 1300px
         margin: 0 auto
 
-        li
-            display: inline-block
-            width: 200px
-            height: 120px
-            cursor: pointer
-            transition-duration: 0.2s
+    // Main menu
+    .menu-wrapper
+        background-color: $blue
 
-            &:hover
-                background-color: $grey
+    // Submenu
+    .submenu-wrapper
+        position: absolute
+        width: 100%
+        opacity: 0%
+        transition-duration: 0.4s
+        background-color: $white
+        left: 0
+        border-bottom: 4px solid $blue
+        z-index: 0
+        display: none
 
-                a
-                    color: $blue
+        &.active
+            opacity: 1
+            top: 120px
 
-                    .description
-                        opacity: 1
-                        top: -50px
+        > ul li a
+            color: $blue
 
-            a
-                color: $white
-                width: 100%
-                height: 100%
-                padding: 10px
-                display: flex
-                flex-direction: column
-                justify-content: space-evenly
-                align-items: center
-                transition-duration: 0.2s
-                position: relative
-
-                .fa
-                    font-size: 47px
-
-                .description
-                    opacity: 0
-                    border: 1px solid $white
-                    position: absolute
-                    top: 0
-                    right: 0
-                    padding: 5px
-                    font-size: 12px
-                    width: 100%
-                    background-color: $white
-                    color: $blue
-                    z-index: 1
-                    transition-duration: 0.2s
-                    transition-delay: 0.2s
-                    border-radius: 5px

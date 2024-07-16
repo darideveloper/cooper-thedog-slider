@@ -58,38 +58,46 @@
 }
 
 #buttons-new {
-  background-color: #425563;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
+  position: relative;
 }
-#buttons-new ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
+#buttons-new > .content {
+  width: 100%;
+  height: auto;
 }
-#buttons-new ul li {
+#buttons-new li {
   display: inline-block;
   width: 200px;
   height: 120px;
   cursor: pointer;
   transition-duration: 0.2s;
+  color: #fff;
+  padding: 10px;
 }
-#buttons-new ul li:hover {
+#buttons-new li.active {
   background-color: #d9e1e2;
-}
-#buttons-new ul li:hover a {
   color: #425563;
 }
-#buttons-new ul li:hover a .description {
-  opacity: 1;
-  top: -50px;
+#buttons-new li:hover .fa {
+  font-size: 40px;
 }
-#buttons-new ul li a {
-  color: #fff;
+#buttons-new li:hover > .content .description {
+  opacity: 1;
+  top: -70px;
+}
+#buttons-new li .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+#buttons-new li a {
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -98,12 +106,12 @@
   justify-content: space-evenly;
   align-items: center;
   transition-duration: 0.2s;
-  position: relative;
 }
-#buttons-new ul li a .fa {
-  font-size: 47px;
+#buttons-new li .fa {
+  transition-duration: 0.2s;
+  font-size: 30px;
 }
-#buttons-new ul li a .description {
+#buttons-new li .description {
   opacity: 0;
   border: 1px solid #fff;
   position: absolute;
@@ -114,10 +122,39 @@
   width: 100%;
   background-color: #fff;
   color: #425563;
-  z-index: 1;
   transition-duration: 0.2s;
   transition-delay: 0.2s;
   border-radius: 5px;
+  z-index: 1;
+}
+#buttons-new ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+#buttons-new .menu-wrapper {
+  background-color: #425563;
+}
+#buttons-new .submenu-wrapper {
+  position: absolute;
+  width: 100%;
+  opacity: 0%;
+  transition-duration: 0.4s;
+  background-color: #fff;
+  left: 0;
+  border-bottom: 4px solid #425563;
+  z-index: 0;
+  display: none;
+}
+#buttons-new .submenu-wrapper.active {
+  opacity: 1;
+  top: 120px;
+}
+#buttons-new .submenu-wrapper > ul li a {
+  color: #425563;
 }
 
 /*# sourceMappingURL=styles.css.map */
