@@ -2,11 +2,16 @@
 const slider = document.querySelector('#slider .splide__list')
 for (slideData of slidesData) {
 
+  let content = `<img src="${slideData.src}" alt="${slideData.alt}" />`
+  if (slideData.link != "") {
+    content = `<a href="${slideData.link}" target="_blank">${content}</a>`
+  } else {
+    content = `<a>${content}</a>`
+  }
+
   const slideElem = `
     <li class="splide__slide">
-      <a href="${slideData.link}">
-          <img src="${slideData.src}" alt="${slideData.alt}" />
-      </a>
+      ${content}
     </li>
   `
   slider.innerHTML += slideElem
@@ -67,7 +72,7 @@ function ClickButton(e) {
         const submenuItemText = `
         <li>
             <div class="content">
-                <a href="${submenuItem.link}">
+                <a href="${submenuItem.link}" target="_blank">
                   <i class="fa ${submenuItem.icon}"></i>
                   <p>${submenuItem.title}</p>
                 </a>
