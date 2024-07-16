@@ -704,11 +704,11 @@
 
     <!-- 
     --------------------
-    Dari dev Setup Slider and menu links
+    Dari dev Setup Slider and buttons
     ---------------------
     -->
     <script>
-        // Update the slidesData with the images and links
+        // SidesData with the images and links
         const slidesData = [
             {
                 "src": "./images/img1.webp",
@@ -740,7 +740,126 @@
                 "alt": "Slide first image",
                 "link": "https://www.darideveloper.com",
             },
-        ]
+        ];
+
+        // Menu buttons with submenus
+        const menusButtonsData = [
+            {
+                "class": "dashboard",
+                "title": "My Learner Dashboard",
+                "icon": "fa-dashboard",
+                "description": "Access your personal learning dashboard.",
+                "submenu": [
+                    {
+                        "title": "Test Submenu 1",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 2",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 3",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                ],
+            },
+            {
+                "class": "required-training",
+                "title": "My Required Training",
+                "icon": "fa-map-o",
+                "description": "View your assigned training.",
+                "submenu": [
+                    {
+                        "title": "Test Submenu 4",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 5",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                ],
+            },
+            {   
+                "class": "transcript",
+                "title": "My Transcript",
+                "icon": "fa-graduation-cap",
+                "description": "View your completed courses.",
+                "submenu": [
+                    {
+                        "title": "Test Submenu 6",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                ],
+            },
+            {
+                "class": "team-dashboard",
+                "title": "My Team Dashboard",
+                "icon": "fa-group",
+                "description": "View your teams dashboard.",
+                "submenu": [
+                    {
+                        "title": "Test Submenu 7",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 8",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                ],
+            },
+            {
+                "class": "accelerating-u-help",
+                "title": "Accelerating U Help",
+                "icon": "fa-question-circle-o",
+                "description": "Access Help Materials.",
+                "submenu": [
+                    {
+                        "title": "Test Submenu 9",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 10",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 11",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 12",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 13",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 14",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    },
+                    {
+                        "title": "Test Submenu 15",
+                        "icon": "fa-dashboard",
+                        "link": "https://www.darideveloper.com",
+                    }
+                ],
+            },
+        ];
 
     </script>
 
@@ -815,135 +934,11 @@
         </section>
         <!-- End slider -->
 
-        <!-- Buttons -->
-        <div class="buttons animate-panel">
-
-            <ul class="list-unstyled list-inline">
-                <li>
-                    <a href="/core/dash/learning" target="_top">
-                        <div class="inner">
-                            <i class="fa fa-dashboard"></i>
-                            <p>My Learner Dashboard</p>
-                            <div class="description">
-                                <p>Access your personal learning dashboard.</p>
-                            </div>
-                        </div>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/core/pillarRedirect?url=%2Flearning%2Fapp%2Fmanagement%2FLMS_TrainRequired.aspx%3FUserMode%3D0&relyingParty=LM"
-                        target="_top">
-                        <div class="inner">
-                            <i class="fa fa-map-o"></i>
-                            <p>My Required Training</p>
-                            <div class="description">
-                                <p>View your assigned training.</p>
-                            </div>
-                        </div>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/Core/pillarRedirect?relyingParty=LM&url=https:%2F%2FPAE.sumtotal.host%2Flearning%2Fapp%2Fmanagement%2FLMS_LearnerReports.aspx%3FUserMode%3D0%26Mode%3D1"
-                        target="_top">
-                        <div class="inner">
-                            <i class="fa fa-graduation-cap"></i>
-                            <p>My Transcript</p>
-                            <div class="description">
-                                <p>View your completed courses.</p>
-                            </div>
-                        </div>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/core/dash/MyTeamDash/initial" target="_top">
-                        <div class="inner">
-                            <i class="fa fa-group"></i>
-                            <p>My Team Dashboard</p>
-                            <div class="description">
-                                <p>View your teams dashboard.</p>
-                            </div>
-                        </div>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/core/libraryShare?TopicId=198&TopicName=Accelerating%20U%20Help&SearchText="
-                        target="_top">
-                        <div class="inner">
-                            <i class="fa fa-question-circle-o"></i>
-                            <p>Accelerating U Help</p>
-                            <div class="description">
-                                <p>Access Help Materials.</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- End Buttons -->
-
         <!-- Buttons (new) -->
         <section class="buttons-new" id="buttons-new">
             <div class="content">
                 <div class="menu-wrapper">
                     <ul class="menu">
-                        <li>
-                            <div class="content">
-                                <i class="fa fa-dashboard"></i>
-                                <p>My Learner Dashboard</p>
-                                <div class="description">
-                                    <p>Access your personal learning dashboard.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content">
-                                <i class="fa fa-map-o"></i>
-                                <p>My Required Training</p>
-                                <div class="description">
-                                    <p>View your assigned training.</p>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <i class="fa fa-graduation-cap"></i>
-                                <p>My Transcript</p>
-                                <div class="description">
-                                    <p>View your completed courses.</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <i class="fa fa-group"></i>
-                                <p>My Team Dashboard</p>
-                                <div class="description">
-                                    <p>View your teams dashboard.</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <i class="fa fa-question-circle-o"></i>
-                                <p>Accelerating U Help</p>
-                                <div class="description">
-                                    <p>Access Help Materials.</p>
-                                </div>
-                            </div>
-                        </li>
                     </ul>
                 </div>
 
