@@ -58,7 +58,7 @@ function HoverButtonMenu(menuButton) {
         const submenuItemText = `
         <li>
             <div class="content">
-                <a href="${submenuItem.link}" target="_blank">
+                <a href="${submenuItem.link}" target="${submenuItem.target}">
                   <i class="fa ${submenuItem.icon}"></i>
                   <p>${submenuItem.title}</p>
                 </a>
@@ -87,13 +87,13 @@ for (const menuButonData of menusButtonsData) {
 
   const menuButtonElem = `
   <li class="${menuButonData.class}">
-      <div class="content">
+      <a class="content" href="${menuButonData.link}" target="${menuButonData.target}">
           <i class="fa ${menuButonData.icon}"></i>
           <p>${menuButonData.title}</p>
           <div class="description">
               <p>${menuButonData.description}</p>
           </div>
-      </div>
+      </a>
   </li>`
   menuElem.innerHTML += menuButtonElem  
 }
