@@ -28,11 +28,9 @@ splide.mount()
 // Menu global elems
 let currentSubmenu = ""
 const submenuElem = document.querySelector('.submenu-wrapper')
-const menuButtonsElems = document.querySelectorAll('.menu > li')
 const menuElem = document.querySelector('.menu')
 
-function ClickButton(e) {
-  const menuButton = e.currentTarget
+function HoverButtonMenu(menuButton) {
   const newSubmenu = menuButton.querySelector('p').textContent
   
   // Active current button
@@ -43,22 +41,10 @@ function ClickButton(e) {
   // Check in the menu button is already active
   if (newSubmenu === currentSubmenu) {
     // Hide menu
-    submenuElem.classList.remove('active')
     currentSubmenu = ""
-    menuButton.classList.remove('active')
-    submenuElem.style.opacity = 0
-
-    // Update display
-    setTimeout(() => {
-      submenuElem.style.display = 'none'
-    }, 300)
-
 
   // Click in other menu button
   } else {
-
-    // Update display
-    submenuElem.style.display = 'block'
 
     // Hide submenu
     submenuElem.style.opacity = 0
@@ -89,13 +75,8 @@ function ClickButton(e) {
       submenuElem.style.opacity = 1
     }, 300)
 
-    // calculate submenu top
-    const menuHeight = menuElem.offsetHeight
-    submenuElem.style.top = `${menuHeight}px`
-
     setTimeout(() => {
       // Show menu
-      submenuElem.classList.add('active')
       currentSubmenu = newSubmenu
     }, 100)
   }
@@ -105,7 +86,7 @@ function ClickButton(e) {
 for (const menuButonData of menusButtonsData) {
 
   const menuButtonElem = `
-  <li class="${menuButonData.class}" onclick="ClickButton(event)">
+  <li class="${menuButonData.class}">
       <div class="content">
           <i class="fa ${menuButonData.icon}"></i>
           <p>${menuButonData.title}</p>
@@ -116,3 +97,20 @@ for (const menuButonData of menusButtonsData) {
   </li>`
   menuElem.innerHTML += menuButtonElem  
 }
+
+// Add hover event to menu buttons
+setTimeout(() => {
+  
+  // Add llistener to each button
+  const menuButtonsElems = document.querySelectorAll('.menu > li')
+  menuButtonsElems.forEach((elem) => {
+    elem.addEventListener('mouseenter', () => {
+      HoverButtonMenu(elem)
+    })
+  })
+
+  // Render active button
+  const activeButton = document.querySelector('.menu > li.active')
+  HoverButtonMenu(activeButton)
+
+}, 1000)

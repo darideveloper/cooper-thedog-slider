@@ -1,17 +1,3 @@
-.header {
-  position: initial !important;
-}
-
-.buttons {
-  position: initial !important;
-  width: 100%;
-  display: none !important;
-}
-
-.header, #slideout, #slideout2 {
-  display: none !important;
-}
-
 #slider .splide__slide a {
   width: 95%;
   display: inline-block;
@@ -139,19 +125,11 @@
   background-color: #425563;
 }
 #buttons-new .submenu-wrapper {
-  position: absolute;
   width: 100%;
-  opacity: 0%;
+  opacity: 1;
   transition-duration: 0.4s;
   background-color: #fff;
-  left: 0;
   border-bottom: 4px solid #425563;
-  z-index: 0;
-  display: none;
-}
-#buttons-new .submenu-wrapper.active {
-  opacity: 1;
-  top: 120px;
 }
 #buttons-new .submenu-wrapper > ul li a {
   color: #425563;

@@ -3,17 +3,6 @@ $blue: #425563
 $white: #fff
 $grey: #d9e1e2
     
-// Fix wrong styles
-.header
-    position: initial !important
-
-.buttons 
-    position: initial !important
-    width: 100%
-    display: none !important
-
-.header, #slideout, #slideout2
-    display: none !important
 
 // Slider styles 
 #slider
@@ -157,19 +146,11 @@ $grey: #d9e1e2
 
     // Submenu
     .submenu-wrapper
-        position: absolute
         width: 100%
-        opacity: 0%
+        opacity: 1
         transition-duration: 0.4s
         background-color: $white
-        left: 0
         border-bottom: 4px solid $blue
-        z-index: 0
-        display: none
-
-        &.active
-            opacity: 1
-            top: 120px
 
         > ul li a
             color: $blue
