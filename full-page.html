@@ -696,22 +696,6 @@
     ---------------------
     -->
     <style>
-        /*.header {
-            position: initial !important;
-        }
-
-        .buttons {
-            position: initial !important;
-            width: 100%;
-            display: none !important;
-        }
-
-        .header,
-        #slideout,
-        #slideout2 {
-            display: none !important;
-        }*/
-
         #slider .splide__slide a {
             width: 95%;
             display: inline-block;
@@ -793,8 +777,16 @@
             color: #425563;
         }
 
+        #buttons-new li.active>.content {
+            color: #425563;
+        }
+
         #buttons-new li:hover .fa {
             font-size: 40px;
+        }
+
+        #buttons-new li:hover>.content {
+            color: #425563;
         }
 
         #buttons-new li:hover>.content .description {
@@ -811,6 +803,7 @@
             justify-content: space-evenly;
             align-items: center;
             transition-duration: 0.2s;
+            color: #fff;
         }
 
         #buttons-new li a {
@@ -860,25 +853,18 @@
         }
 
         #buttons-new .submenu-wrapper {
-            position: absolute;
             width: 100%;
-            opacity: 0%;
+            opacity: 1;
             transition-duration: 0.4s;
             background-color: #fff;
-            left: 0;
             border-bottom: 4px solid #425563;
-            z-index: 0;
-            display: none;
-        }
-
-        #buttons-new .submenu-wrapper.active {
-            opacity: 1;
-            top: 120px;
         }
 
         #buttons-new .submenu-wrapper>ul li a {
             color: #425563;
         }
+
+        /*# sourceMappingURL=styles.css.map */
     </style>
 
     <!-- 
@@ -924,25 +910,30 @@
         // Menu buttons with submenus
         const menusButtonsData = [
             {
-                "class": "dashboard",
+                "class": "dashboard active",
                 "title": "My Learner Dashboard",
                 "icon": "fa-dashboard",
                 "description": "Access your personal learning dashboard.",
+                "link": "https://www.darideveloper.com",
+                "target": "_blank",
                 "submenu": [
                     {
                         "title": "Test Submenu 1",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 2",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 3",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                 ],
             },
@@ -951,16 +942,20 @@
                 "title": "My Required Training",
                 "icon": "fa-map-o",
                 "description": "View your assigned training.",
+                "link": "https://www.darideveloper.com",
+                "target": "_blank",
                 "submenu": [
                     {
                         "title": "Test Submenu 4",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 5",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                 ],
             },
@@ -969,11 +964,14 @@
                 "title": "My Transcript",
                 "icon": "fa-graduation-cap",
                 "description": "View your completed courses.",
+                "link": "https://www.darideveloper.com",
+                "target": "_blank",
                 "submenu": [
                     {
                         "title": "Test Submenu 6",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                 ],
             },
@@ -982,16 +980,20 @@
                 "title": "My Team Dashboard",
                 "icon": "fa-group",
                 "description": "View your teams dashboard.",
+                "link": "https://www.darideveloper.com",
+                "target": "_blank",
                 "submenu": [
                     {
                         "title": "Test Submenu 7",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 8",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                 ],
             },
@@ -1000,41 +1002,50 @@
                 "title": "Accelerating U Help",
                 "icon": "fa-question-circle-o",
                 "description": "Access Help Materials.",
+                "link": "https://www.darideveloper.com",
+                "target": "_blank",
                 "submenu": [
                     {
                         "title": "Test Submenu 9",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 10",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 11",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 12",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 13",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 14",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     },
                     {
                         "title": "Test Submenu 15",
                         "icon": "fa-dashboard",
                         "link": "https://www.darideveloper.com",
+                        "target": "_blank",
                     }
                 ],
             },
@@ -1080,7 +1091,6 @@
                 </div>
 
 
-                <!-- uncomment images -->
                 <img class="welcometext" src="https://pae.sumtotal.host/Core/82.sumtfile" />
                 <img class="welcometext2" src="https://pae.sumtotal.host/Core/95.sumtfile" />
 
@@ -1122,55 +1132,6 @@
                 </div>
 
                 <div class="submenu-wrapper">
-                    <ul class="submenu">
-                        <li>
-                            <div class="content">
-                                <a href="/core/dash/learning" target="_top">
-                                    <i class="fa fa-dashboard"></i>
-                                    <p>My Learner Dashboard</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <a href="/core/pillarRedirect?url=%2Flearning%2Fapp%2Fmanagement%2FLMS_TrainRequired.aspx%3FUserMode%3D0&relyingParty=LM"
-                                    target="_top">
-                                    <i class="fa fa-map-o"></i>
-                                    <p>My Required Training</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <a href="/Core/pillarRedirect?relyingParty=LM&url=https:%2F%2FPAE.sumtotal.host%2Flearning%2Fapp%2Fmanagement%2FLMS_LearnerReports.aspx%3FUserMode%3D0%26Mode%3D1"
-                                    target="_top">
-                                    <i class="fa fa-graduation-cap"></i>
-                                    <p>My Transcript</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <a href="/core/dash/MyTeamDash/initial" target="_top">
-                                    <i class="fa fa-group"></i>
-                                    <p>My Team Dashboard</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content">
-                                <a href="/core/libraryShare?TopicId=198&TopicName=Accelerating%20U%20Help&SearchText="
-                                    target="_top">
-                                    <i class="fa fa-question-circle-o"></i>
-                                    <p>Accelerating U Help</p>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -1278,7 +1239,12 @@
 
     </script>
 
-    <!-- Dari Dev Js -->
+
+    <!-- 
+    --------------------
+    Dari dev custom js
+    ---------------------
+    -->
     <script>
         // Create slides
         const slider = document.querySelector('#slider .splide__list')
@@ -1310,11 +1276,9 @@
         // Menu global elems
         let currentSubmenu = ""
         const submenuElem = document.querySelector('.submenu-wrapper')
-        const menuButtonsElems = document.querySelectorAll('.menu > li')
         const menuElem = document.querySelector('.menu')
 
-        function ClickButton(e) {
-            const menuButton = e.currentTarget
+        function HoverButtonMenu(menuButton) {
             const newSubmenu = menuButton.querySelector('p').textContent
 
             // Active current button
@@ -1325,22 +1289,10 @@
             // Check in the menu button is already active
             if (newSubmenu === currentSubmenu) {
                 // Hide menu
-                submenuElem.classList.remove('active')
                 currentSubmenu = ""
-                menuButton.classList.remove('active')
-                submenuElem.style.opacity = 0
-
-                // Update display
-                setTimeout(() => {
-                    submenuElem.style.display = 'none'
-                }, 300)
-
 
                 // Click in other menu button
             } else {
-
-                // Update display
-                submenuElem.style.display = 'block'
 
                 // Hide submenu
                 submenuElem.style.opacity = 0
@@ -1354,7 +1306,7 @@
                         const submenuItemText = `
         <li>
             <div class="content">
-                <a href="${submenuItem.link}" target="_blank">
+                <a href="${submenuItem.link}" target="${submenuItem.target}">
                   <i class="fa ${submenuItem.icon}"></i>
                   <p>${submenuItem.title}</p>
                 </a>
@@ -1371,13 +1323,8 @@
                     submenuElem.style.opacity = 1
                 }, 300)
 
-                // calculate submenu top
-                const menuHeight = menuElem.offsetHeight
-                submenuElem.style.top = `${menuHeight}px`
-
                 setTimeout(() => {
                     // Show menu
-                    submenuElem.classList.add('active')
                     currentSubmenu = newSubmenu
                 }, 100)
             }
@@ -1387,17 +1334,34 @@
         for (const menuButonData of menusButtonsData) {
 
             const menuButtonElem = `
-  <li class="${menuButonData.class}" onclick="ClickButton(event)">
-      <div class="content">
+  <li class="${menuButonData.class}">
+      <a class="content" href="${menuButonData.link}" target="${menuButonData.target}">
           <i class="fa ${menuButonData.icon}"></i>
           <p>${menuButonData.title}</p>
           <div class="description">
               <p>${menuButonData.description}</p>
           </div>
-      </div>
+      </a>
   </li>`
             menuElem.innerHTML += menuButtonElem
         }
+
+        // Add hover event to menu buttons
+        setTimeout(() => {
+
+            // Add llistener to each button
+            const menuButtonsElems = document.querySelectorAll('.menu > li')
+            menuButtonsElems.forEach((elem) => {
+                elem.addEventListener('mouseenter', () => {
+                    HoverButtonMenu(elem)
+                })
+            })
+
+            // Render active button
+            const activeButton = document.querySelector('.menu > li.active')
+            HoverButtonMenu(activeButton)
+
+        }, 1000)
     </script>
 
 </body>
